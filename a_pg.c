@@ -1,3 +1,4 @@
+
 #include <math.h>
 #include <string.h>
 #include <stdio.h>
@@ -14,10 +15,16 @@ double Anew[NN][NM];
 
 int main(int argc, char** argv)
 {
-#ifdef _AA
+  printf("aa");
   
-#pragma acc enter data copyin(A)
-#pragma acc enter data copyin(Anew)
+ /* #pragma acc enter data copyin(A) */
+ /* #pragma acc enter data copyin(Anew) */
+  double **AA;//[NN][NM];
+  //double AAnew[NN][NM];
+  
+  /* #pragma acc data update copyin(A) */
+  /* #pragma acc data update copyin(Anew) */
+
 
   const int n = NN;
   const int m = NM;
@@ -29,28 +36,29 @@ int main(int argc, char** argv)
   memset(A, 0, n * m * sizeof(double));
   memset(Anew, 0, n * m * sizeof(double));
   
-#pragma acc update device(A)
-#pragma acc update device(Anew)
-#pragma acc kernels present(A, Anew)
+/* #pragma acc update device(A) */
+/* #pragma acc update device(Anew)   */
+/* #pragma acc kernels present(A, Anew) */
   for (int j = 0; j < n; j++)
     {
       A[j][0]    = 1.0;
       Anew[j][0] = 1.0;
     }
-#pragma acc update host(A,Anew)
+/* #pragma acc update host(A,Anew) */
 
   printf("Jacobi relaxation Calculation: %d x %d mesh\n", n, m);
-  
+  //#pragma acc update device(A)
+  //#pragma acc update device(Anew)    
   StartTimer();
   int iter = 0;
 
-#pragma acc update device(A)
-#pragma acc update device(Anew)
+/* #pragma acc update device(A) */
+/* #pragma acc update device(Anew) */
  
   while ( error > tol && iter < iter_max )
     {
       error = 0.0;
-#pragma acc kernels present(A, Anew)
+/* #pragma acc kernels present(A, Anew) */
       for( int j = 1; j < n-1; j++)
 	{
 	  for( int i = 1; i < m-1; i++ )
@@ -61,7 +69,7 @@ int main(int argc, char** argv)
 	    }
 	}
 
-#pragma acc kernels present(A, Anew)
+/* #pragma acc kernels present(A, Anew) */
       for( int j = 1; j < n-1; j++)
 	{
 	  for( int i = 1; i < m-1; i++ )
@@ -75,7 +83,7 @@ int main(int argc, char** argv)
       iter++;
     }
 
-#pragma acc update host(A,Anew)
+/* #pragma acc update host(A,Anew) */
   //#pragma acc exit data copyout(A,Anew)
   int cou=0;
   for(int i=0;i<n;i++){
@@ -95,6 +103,4 @@ int main(int argc, char** argv)
   printf(" total: %f s %d\n", runtime / 1000,cou);
 
   exit(0);
-
-#endif
 }

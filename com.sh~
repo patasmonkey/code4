@@ -1,0 +1,16 @@
+#!/bin/sh
+
+if ["$1"=""]
+then
+    gcc -E $1.c -o $1.i
+    C_Front $1.i > $1.xml
+else
+    gcc -E a.c -o a.i
+    C_Front a.i > a.xml 
+fi
+python3 kakikuwae_loopizon.py
+python3 loop_data.py
+C_Back output_ce_data.xml >ooo.c
+gcc ooo.c
+
+

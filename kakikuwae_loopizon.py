@@ -244,7 +244,7 @@ def ku_hantei(ele,ch_root):#pragma in or out
     if(ele.tag=="forStatement" and mini_clook_up(ele,ch_root)==1 and ff==1):#can 1
         sub=ET.SubElement(ch_root,'pragma')
         sub.set('lineno',str(yan+line2[sw]))
-        sub.text="acc karnels"
+        sub.text="acc kernels"
         line2[sw]+=1
         print("one_in!")
 

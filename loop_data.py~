@@ -1,0 +1,12 @@
+from xml.etree.ElementTree import *
+import xml.etree.ElementTree as ET
+from xml.dom.minidom import parse, parseString
+import xml.dom.minidom as minidom
+import time
+import math
+import sys
+import argparse
+import pickle
+import codecs
+tree=ET.parse('output.xml')
+root=tree.getroot()

@@ -2,10 +2,9 @@
 # 1 "<built-in>"
 # 1 "<command-line>"
 # 1 "a.c"
-# 1 "/usr/include/stdio.h" 1 3 4
-# 64 "/usr/include/stdio.h" 3 4
-# 1 "/usr/include/_stdio.h" 1 3 4
-# 68 "/usr/include/_stdio.h" 3 4
+# 52 "a.c"
+# 1 "/usr/local/Cellar/gcc/7.1.0/lib/gcc/7/gcc/x86_64-apple-darwin16.5.0/7.1.0/include-fixed/math.h" 1 3 4
+# 45 "/usr/local/Cellar/gcc/7.1.0/lib/gcc/7/gcc/x86_64-apple-darwin16.5.0/7.1.0/include-fixed/math.h" 3 4
 # 1 "/usr/include/sys/cdefs.h" 1 3 4
 # 587 "/usr/include/sys/cdefs.h" 3 4
 # 1 "/usr/include/sys/_symbol_aliasing.h" 1 3 4
@@ -13,13 +12,443 @@
 # 653 "/usr/include/sys/cdefs.h" 3 4
 # 1 "/usr/include/sys/_posix_availability.h" 1 3 4
 # 654 "/usr/include/sys/cdefs.h" 2 3 4
-# 69 "/usr/include/_stdio.h" 2 3 4
+# 46 "/usr/local/Cellar/gcc/7.1.0/lib/gcc/7/gcc/x86_64-apple-darwin16.5.0/7.1.0/include-fixed/math.h" 2 3 4
 # 1 "/usr/include/Availability.h" 1 3 4
 # 206 "/usr/include/Availability.h" 3 4
 # 1 "/usr/local/Cellar/gcc/7.1.0/lib/gcc/7/gcc/x86_64-apple-darwin16.5.0/7.1.0/include-fixed/AvailabilityInternal.h" 1 3 4
 # 207 "/usr/include/Availability.h" 2 3 4
-# 70 "/usr/include/_stdio.h" 2 3 4
+# 47 "/usr/local/Cellar/gcc/7.1.0/lib/gcc/7/gcc/x86_64-apple-darwin16.5.0/7.1.0/include-fixed/math.h" 2 3 4
 
+
+# 59 "/usr/local/Cellar/gcc/7.1.0/lib/gcc/7/gcc/x86_64-apple-darwin16.5.0/7.1.0/include-fixed/math.h" 3 4
+    
+# 59 "/usr/local/Cellar/gcc/7.1.0/lib/gcc/7/gcc/x86_64-apple-darwin16.5.0/7.1.0/include-fixed/math.h" 3 4
+   typedef float float_t;
+    typedef double double_t;
+# 126 "/usr/local/Cellar/gcc/7.1.0/lib/gcc/7/gcc/x86_64-apple-darwin16.5.0/7.1.0/include-fixed/math.h" 3 4
+extern int __math_errhandling(void);
+# 159 "/usr/local/Cellar/gcc/7.1.0/lib/gcc/7/gcc/x86_64-apple-darwin16.5.0/7.1.0/include-fixed/math.h" 3 4
+extern int __fpclassifyf(float);
+extern int __fpclassifyd(double);
+extern int __fpclassifyl(long double);
+# 203 "/usr/local/Cellar/gcc/7.1.0/lib/gcc/7/gcc/x86_64-apple-darwin16.5.0/7.1.0/include-fixed/math.h" 3 4
+extern __inline __attribute__((__gnu_inline__)) __attribute__ ((__always_inline__)) int __inline_isfinitef(float);
+extern __inline __attribute__((__gnu_inline__)) __attribute__ ((__always_inline__)) int __inline_isfinited(double);
+extern __inline __attribute__((__gnu_inline__)) __attribute__ ((__always_inline__)) int __inline_isfinitel(long double);
+extern __inline __attribute__((__gnu_inline__)) __attribute__ ((__always_inline__)) int __inline_isinff(float);
+extern __inline __attribute__((__gnu_inline__)) __attribute__ ((__always_inline__)) int __inline_isinfd(double);
+extern __inline __attribute__((__gnu_inline__)) __attribute__ ((__always_inline__)) int __inline_isinfl(long double);
+extern __inline __attribute__((__gnu_inline__)) __attribute__ ((__always_inline__)) int __inline_isnanf(float);
+extern __inline __attribute__((__gnu_inline__)) __attribute__ ((__always_inline__)) int __inline_isnand(double);
+extern __inline __attribute__((__gnu_inline__)) __attribute__ ((__always_inline__)) int __inline_isnanl(long double);
+extern __inline __attribute__((__gnu_inline__)) __attribute__ ((__always_inline__)) int __inline_isnormalf(float);
+extern __inline __attribute__((__gnu_inline__)) __attribute__ ((__always_inline__)) int __inline_isnormald(double);
+extern __inline __attribute__((__gnu_inline__)) __attribute__ ((__always_inline__)) int __inline_isnormall(long double);
+extern __inline __attribute__((__gnu_inline__)) __attribute__ ((__always_inline__)) int __inline_signbitf(float);
+extern __inline __attribute__((__gnu_inline__)) __attribute__ ((__always_inline__)) int __inline_signbitd(double);
+extern __inline __attribute__((__gnu_inline__)) __attribute__ ((__always_inline__)) int __inline_signbitl(long double);
+
+extern __inline __attribute__((__gnu_inline__)) __attribute__ ((__always_inline__)) int __inline_isfinitef(float __x) {
+    return __x == __x && __builtin_fabsf(__x) != __builtin_inff();
+}
+extern __inline __attribute__((__gnu_inline__)) __attribute__ ((__always_inline__)) int __inline_isfinited(double __x) {
+    return __x == __x && __builtin_fabs(__x) != __builtin_inf();
+}
+extern __inline __attribute__((__gnu_inline__)) __attribute__ ((__always_inline__)) int __inline_isfinitel(long double __x) {
+    return __x == __x && __builtin_fabsl(__x) != __builtin_infl();
+}
+extern __inline __attribute__((__gnu_inline__)) __attribute__ ((__always_inline__)) int __inline_isinff(float __x) {
+    return __builtin_fabsf(__x) == __builtin_inff();
+}
+extern __inline __attribute__((__gnu_inline__)) __attribute__ ((__always_inline__)) int __inline_isinfd(double __x) {
+    return __builtin_fabs(__x) == __builtin_inf();
+}
+extern __inline __attribute__((__gnu_inline__)) __attribute__ ((__always_inline__)) int __inline_isinfl(long double __x) {
+    return __builtin_fabsl(__x) == __builtin_infl();
+}
+extern __inline __attribute__((__gnu_inline__)) __attribute__ ((__always_inline__)) int __inline_isnanf(float __x) {
+    return __x != __x;
+}
+extern __inline __attribute__((__gnu_inline__)) __attribute__ ((__always_inline__)) int __inline_isnand(double __x) {
+    return __x != __x;
+}
+extern __inline __attribute__((__gnu_inline__)) __attribute__ ((__always_inline__)) int __inline_isnanl(long double __x) {
+    return __x != __x;
+}
+extern __inline __attribute__((__gnu_inline__)) __attribute__ ((__always_inline__)) int __inline_signbitf(float __x) {
+    union { float __f; unsigned int __u; } __u;
+    __u.__f = __x;
+    return (int)(__u.__u >> 31);
+}
+extern __inline __attribute__((__gnu_inline__)) __attribute__ ((__always_inline__)) int __inline_signbitd(double __x) {
+    union { double __f; unsigned long long __u; } __u;
+    __u.__f = __x;
+    return (int)(__u.__u >> 63);
+}
+
+extern __inline __attribute__((__gnu_inline__)) __attribute__ ((__always_inline__)) int __inline_signbitl(long double __x) {
+    union {
+        long double __ld;
+        struct{ unsigned long long __m; unsigned short __sexp; } __p;
+    } __u;
+    __u.__ld = __x;
+    return (int)(__u.__p.__sexp >> 15);
+}
+
+
+
+
+
+
+
+extern __inline __attribute__((__gnu_inline__)) __attribute__ ((__always_inline__)) int __inline_isnormalf(float __x) {
+    return __inline_isfinitef(__x) && __builtin_fabsf(__x) >= 1.17549435082228750796873653722224568e-38F;
+}
+extern __inline __attribute__((__gnu_inline__)) __attribute__ ((__always_inline__)) int __inline_isnormald(double __x) {
+    return __inline_isfinited(__x) && __builtin_fabs(__x) >= ((double)2.22507385850720138309023271733240406e-308L);
+}
+extern __inline __attribute__((__gnu_inline__)) __attribute__ ((__always_inline__)) int __inline_isnormall(long double __x) {
+    return __inline_isfinitel(__x) && __builtin_fabsl(__x) >= 3.36210314311209350626267781732175260e-4932L;
+}
+# 337 "/usr/local/Cellar/gcc/7.1.0/lib/gcc/7/gcc/x86_64-apple-darwin16.5.0/7.1.0/include-fixed/math.h" 3 4
+extern float acosf(float);
+extern double acos(double);
+extern long double acosl(long double);
+
+extern float asinf(float);
+extern double asin(double);
+extern long double asinl(long double);
+
+extern float atanf(float);
+extern double atan(double);
+extern long double atanl(long double);
+
+extern float atan2f(float, float);
+extern double atan2(double, double);
+extern long double atan2l(long double, long double);
+
+extern float cosf(float);
+extern double cos(double);
+extern long double cosl(long double);
+
+extern float sinf(float);
+extern double sin(double);
+extern long double sinl(long double);
+
+extern float tanf(float);
+extern double tan(double);
+extern long double tanl(long double);
+
+extern float acoshf(float);
+extern double acosh(double);
+extern long double acoshl(long double);
+
+extern float asinhf(float);
+extern double asinh(double);
+extern long double asinhl(long double);
+
+extern float atanhf(float);
+extern double atanh(double);
+extern long double atanhl(long double);
+
+extern float coshf(float);
+extern double cosh(double);
+extern long double coshl(long double);
+
+extern float sinhf(float);
+extern double sinh(double);
+extern long double sinhl(long double);
+
+extern float tanhf(float);
+extern double tanh(double);
+extern long double tanhl(long double);
+
+extern float expf(float);
+extern double exp(double);
+extern long double expl(long double);
+
+extern float exp2f(float);
+extern double exp2(double);
+extern long double exp2l(long double);
+
+extern float expm1f(float);
+extern double expm1(double);
+extern long double expm1l(long double);
+
+extern float logf(float);
+extern double log(double);
+extern long double logl(long double);
+
+extern float log10f(float);
+extern double log10(double);
+extern long double log10l(long double);
+
+extern float log2f(float);
+extern double log2(double);
+extern long double log2l(long double);
+
+extern float log1pf(float);
+extern double log1p(double);
+extern long double log1pl(long double);
+
+extern float logbf(float);
+extern double logb(double);
+extern long double logbl(long double);
+
+extern float modff(float, float *);
+extern double modf(double, double *);
+extern long double modfl(long double, long double *);
+
+extern float ldexpf(float, int);
+extern double ldexp(double, int);
+extern long double ldexpl(long double, int);
+
+extern float frexpf(float, int *);
+extern double frexp(double, int *);
+extern long double frexpl(long double, int *);
+
+extern int ilogbf(float);
+extern int ilogb(double);
+extern int ilogbl(long double);
+
+extern float scalbnf(float, int);
+extern double scalbn(double, int);
+extern long double scalbnl(long double, int);
+
+extern float scalblnf(float, long int);
+extern double scalbln(double, long int);
+extern long double scalblnl(long double, long int);
+
+extern float fabsf(float);
+extern double fabs(double);
+extern long double fabsl(long double);
+
+extern float cbrtf(float);
+extern double cbrt(double);
+extern long double cbrtl(long double);
+
+extern float hypotf(float, float);
+extern double hypot(double, double);
+extern long double hypotl(long double, long double);
+
+extern float powf(float, float);
+extern double pow(double, double);
+extern long double powl(long double, long double);
+
+extern float sqrtf(float);
+extern double sqrt(double);
+extern long double sqrtl(long double);
+
+extern float erff(float);
+extern double erf(double);
+extern long double erfl(long double);
+
+extern float erfcf(float);
+extern double erfc(double);
+extern long double erfcl(long double);
+
+
+
+
+extern float lgammaf(float);
+extern double lgamma(double);
+extern long double lgammal(long double);
+
+extern float tgammaf(float);
+extern double tgamma(double);
+extern long double tgammal(long double);
+
+extern float ceilf(float);
+extern double ceil(double);
+extern long double ceill(long double);
+
+extern float floorf(float);
+extern double floor(double);
+extern long double floorl(long double);
+
+extern float nearbyintf(float);
+extern double nearbyint(double);
+extern long double nearbyintl(long double);
+
+extern float rintf(float);
+extern double rint(double);
+extern long double rintl(long double);
+
+extern long int lrintf(float);
+extern long int lrint(double);
+extern long int lrintl(long double);
+
+extern float roundf(float);
+extern double round(double);
+extern long double roundl(long double);
+
+extern long int lroundf(float);
+extern long int lround(double);
+extern long int lroundl(long double);
+
+
+
+
+extern long long int llrintf(float);
+extern long long int llrint(double);
+extern long long int llrintl(long double);
+
+extern long long int llroundf(float);
+extern long long int llround(double);
+extern long long int llroundl(long double);
+
+
+extern float truncf(float);
+extern double trunc(double);
+extern long double truncl(long double);
+
+extern float fmodf(float, float);
+extern double fmod(double, double);
+extern long double fmodl(long double, long double);
+
+extern float remainderf(float, float);
+extern double remainder(double, double);
+extern long double remainderl(long double, long double);
+
+extern float remquof(float, float, int *);
+extern double remquo(double, double, int *);
+extern long double remquol(long double, long double, int *);
+
+extern float copysignf(float, float);
+extern double copysign(double, double);
+extern long double copysignl(long double, long double);
+
+extern float nanf(const char *);
+extern double nan(const char *);
+extern long double nanl(const char *);
+
+extern float nextafterf(float, float);
+extern double nextafter(double, double);
+extern long double nextafterl(long double, long double);
+
+extern double nexttoward(double, long double);
+extern float nexttowardf(float, long double);
+extern long double nexttowardl(long double, long double);
+
+extern float fdimf(float, float);
+extern double fdim(double, double);
+extern long double fdiml(long double, long double);
+
+extern float fmaxf(float, float);
+extern double fmax(double, double);
+extern long double fmaxl(long double, long double);
+
+extern float fminf(float, float);
+extern double fmin(double, double);
+extern long double fminl(long double, long double);
+
+extern float fmaf(float, float, float);
+extern double fma(double, double, double);
+extern long double fmal(long double, long double, long double);
+# 580 "/usr/local/Cellar/gcc/7.1.0/lib/gcc/7/gcc/x86_64-apple-darwin16.5.0/7.1.0/include-fixed/math.h" 3 4
+extern float __inff(void) __attribute__((deprecated));
+extern double __inf(void) __attribute__((deprecated));
+extern long double __infl(void) __attribute__((deprecated));
+
+extern float __nan(void) ;
+# 612 "/usr/local/Cellar/gcc/7.1.0/lib/gcc/7/gcc/x86_64-apple-darwin16.5.0/7.1.0/include-fixed/math.h" 3 4
+extern float __exp10f(float) ;
+extern double __exp10(double) ;
+
+
+
+
+
+extern __inline __attribute__((__gnu_inline__)) __attribute__ ((__always_inline__)) void __sincosf(float __x, float *__sinp, float *__cosp);
+extern __inline __attribute__((__gnu_inline__)) __attribute__ ((__always_inline__)) void __sincos(double __x, double *__sinp, double *__cosp);
+# 629 "/usr/local/Cellar/gcc/7.1.0/lib/gcc/7/gcc/x86_64-apple-darwin16.5.0/7.1.0/include-fixed/math.h" 3 4
+extern float __cospif(float) ;
+extern double __cospi(double) ;
+extern float __sinpif(float) ;
+extern double __sinpi(double) ;
+extern float __tanpif(float) ;
+extern double __tanpi(double) ;
+# 660 "/usr/local/Cellar/gcc/7.1.0/lib/gcc/7/gcc/x86_64-apple-darwin16.5.0/7.1.0/include-fixed/math.h" 3 4
+extern __inline __attribute__((__gnu_inline__)) __attribute__ ((__always_inline__)) void __sincospif(float __x, float *__sinp, float *__cosp);
+extern __inline __attribute__((__gnu_inline__)) __attribute__ ((__always_inline__)) void __sincospi(double __x, double *__sinp, double *__cosp);
+
+
+
+
+
+
+struct __float2 { float __sinval; float __cosval; };
+struct __double2 { double __sinval; double __cosval; };
+
+extern struct __float2 __sincosf_stret(float);
+extern struct __double2 __sincos_stret(double);
+extern struct __float2 __sincospif_stret(float);
+extern struct __double2 __sincospi_stret(double);
+
+extern __inline __attribute__((__gnu_inline__)) __attribute__ ((__always_inline__)) void __sincosf(float __x, float *__sinp, float *__cosp) {
+    const struct __float2 __stret = __sincosf_stret(__x);
+    *__sinp = __stret.__sinval; *__cosp = __stret.__cosval;
+}
+
+extern __inline __attribute__((__gnu_inline__)) __attribute__ ((__always_inline__)) void __sincos(double __x, double *__sinp, double *__cosp) {
+    const struct __double2 __stret = __sincos_stret(__x);
+    *__sinp = __stret.__sinval; *__cosp = __stret.__cosval;
+}
+
+extern __inline __attribute__((__gnu_inline__)) __attribute__ ((__always_inline__)) void __sincospif(float __x, float *__sinp, float *__cosp) {
+    const struct __float2 __stret = __sincospif_stret(__x);
+    *__sinp = __stret.__sinval; *__cosp = __stret.__cosval;
+}
+
+extern __inline __attribute__((__gnu_inline__)) __attribute__ ((__always_inline__)) void __sincospi(double __x, double *__sinp, double *__cosp) {
+    const struct __double2 __stret = __sincospi_stret(__x);
+    *__sinp = __stret.__sinval; *__cosp = __stret.__cosval;
+}
+
+
+
+
+
+
+
+extern double j0(double) ;
+extern double j1(double) ;
+extern double jn(int, double) ;
+extern double y0(double) ;
+extern double y1(double) ;
+extern double yn(int, double) ;
+extern double scalb(double, double);
+extern int signgam;
+# 766 "/usr/local/Cellar/gcc/7.1.0/lib/gcc/7/gcc/x86_64-apple-darwin16.5.0/7.1.0/include-fixed/math.h" 3 4
+extern long int rinttol(double) __attribute__((deprecated));
+
+extern long int roundtol(double) __attribute__((deprecated));
+
+extern double drem(double, double) __attribute__((deprecated));
+
+extern int finite(double) __attribute__((deprecated));
+
+extern double gamma(double) __attribute__((deprecated));
+
+extern double significand(double) __attribute__((deprecated));
+
+
+struct exception {
+    int type;
+    char *name;
+    double arg1;
+    double arg2;
+    double retval;
+};
+
+extern int matherr(struct exception *) __attribute__((deprecated));
+
+
+
+
+# 53 "a.c" 2
+# 1 "/usr/include/string.h" 1 3 4
+# 61 "/usr/include/string.h" 3 4
 # 1 "/usr/include/_types.h" 1 3 4
 # 27 "/usr/include/_types.h" 3 4
 # 1 "/usr/include/sys/_types.h" 1 3 4
@@ -27,8 +456,6 @@
 # 1 "/usr/include/machine/_types.h" 1 3 4
 # 32 "/usr/include/machine/_types.h" 3 4
 # 1 "/usr/include/i386/_types.h" 1 3 4
-# 37 "/usr/include/i386/_types.h" 3 4
-
 # 37 "/usr/include/i386/_types.h" 3 4
 typedef signed char __int8_t;
 
@@ -195,12 +622,67 @@ typedef int __darwin_nl_item;
 typedef int __darwin_wctrans_t;
 
 typedef __uint32_t __darwin_wctype_t;
-# 72 "/usr/include/_stdio.h" 2 3 4
+# 62 "/usr/include/string.h" 2 3 4
+
+
+# 1 "/usr/include/sys/_types/_size_t.h" 1 3 4
+# 31 "/usr/include/sys/_types/_size_t.h" 3 4
+typedef __darwin_size_t size_t;
+# 65 "/usr/include/string.h" 2 3 4
+# 1 "/usr/include/sys/_types/_null.h" 1 3 4
+# 66 "/usr/include/string.h" 2 3 4
 
 
 
-# 1 "/usr/include/sys/_types/_va_list.h" 1 3 4
-# 31 "/usr/include/sys/_types/_va_list.h" 3 4
+
+void *memchr(const void *__s, int __c, size_t __n);
+int memcmp(const void *__s1, const void *__s2, size_t __n);
+void *memcpy(void *__dst, const void *__src, size_t __n);
+void *memmove(void *__dst, const void *__src, size_t __len);
+void *memset(void *__b, int __c, size_t __len);
+char *strcat(char *__s1, const char *__s2);
+char *strchr(const char *__s, int __c);
+int strcmp(const char *__s1, const char *__s2);
+int strcoll(const char *__s1, const char *__s2);
+char *strcpy(char *__dst, const char *__src);
+size_t strcspn(const char *__s, const char *__charset);
+char *strerror(int __errnum) __asm("_" "strerror" );
+size_t strlen(const char *__s);
+char *strncat(char *__s1, const char *__s2, size_t __n);
+int strncmp(const char *__s1, const char *__s2, size_t __n);
+char *strncpy(char *__dst, const char *__src, size_t __n);
+char *strpbrk(const char *__s, const char *__charset);
+char *strrchr(const char *__s, int __c);
+size_t strspn(const char *__s, const char *__charset);
+char *strstr(const char *__big, const char *__little);
+char *strtok(char *__str, const char *__sep);
+size_t strxfrm(char *__s1, const char *__s2, size_t __n);
+
+# 103 "/usr/include/string.h" 3 4
+
+char *strtok_r(char *__str, const char *__sep, char **__lasts);
+
+# 115 "/usr/include/string.h" 3 4
+
+int strerror_r(int __errnum, char *__strerrbuf, size_t __buflen);
+char *strdup(const char *__s1);
+void *memccpy(void *__dst, const void *__src, int __c, size_t __n);
+
+# 129 "/usr/include/string.h" 3 4
+
+char *stpcpy(char *__dst, const char *__src);
+char *stpncpy(char *__dst, const char *__src, size_t __n) ;
+char *strndup(const char *__s1, size_t __n) ;
+size_t strnlen(const char *__s1, size_t __n) ;
+char *strsignal(int __sig);
+
+
+
+
+
+
+# 1 "/usr/include/sys/_types/_rsize_t.h" 1 3 4
+# 30 "/usr/include/sys/_types/_rsize_t.h" 3 4
 # 1 "/usr/include/machine/types.h" 1 3 4
 # 35 "/usr/include/machine/types.h" 3 4
 # 1 "/usr/include/i386/types.h" 1 3 4
@@ -275,15 +757,106 @@ typedef int64_t user_off_t;
 
 typedef u_int64_t syscall_arg_t;
 # 36 "/usr/include/machine/types.h" 2 3 4
-# 32 "/usr/include/sys/_types/_va_list.h" 2 3 4
+# 31 "/usr/include/sys/_types/_rsize_t.h" 2 3 4
+typedef __darwin_size_t rsize_t;
+# 142 "/usr/include/string.h" 2 3 4
+# 1 "/usr/include/sys/_types/_errno_t.h" 1 3 4
+# 30 "/usr/include/sys/_types/_errno_t.h" 3 4
+typedef int errno_t;
+# 143 "/usr/include/string.h" 2 3 4
+
+
+errno_t memset_s(void *__s, rsize_t __smax, int __c, rsize_t __n) ;
+
+
+
+
+
+
+# 1 "/usr/include/sys/_types/_ssize_t.h" 1 3 4
+# 31 "/usr/include/sys/_types/_ssize_t.h" 3 4
+typedef __darwin_ssize_t ssize_t;
+# 153 "/usr/include/string.h" 2 3 4
+
+
+void *memmem(const void *__big, size_t __big_len, const void *__little, size_t __little_len) ;
+void memset_pattern4(void *__b, const void *__pattern4, size_t __len) ;
+void memset_pattern8(void *__b, const void *__pattern8, size_t __len) ;
+void memset_pattern16(void *__b, const void *__pattern16, size_t __len) ;
+
+char *strcasestr(const char *__big, const char *__little);
+char *strnstr(const char *__big, const char *__little, size_t __len);
+size_t strlcat(char *__dst, const char *__source, size_t __size);
+size_t strlcpy(char *__dst, const char *__source, size_t __size);
+void strmode(int __mode, char *__bp);
+char *strsep(char **__stringp, const char *__delim);
+
+
+void swab(const void * restrict, void * restrict, ssize_t);
+
+
+
+int timingsafe_bcmp(const void *__b1, const void *__b2, size_t __len);
+
+
+
+
+
+
+
+# 1 "/usr/include/strings.h" 1 3 4
+# 67 "/usr/include/strings.h" 3 4
+
+
+
+int bcmp(const void *, const void *, size_t) ;
+void bcopy(const void *, void *, size_t) ;
+void bzero(void *, size_t) ;
+char *index(const char *, int) ;
+char *rindex(const char *, int) ;
+
+
+int ffs(int);
+int strcasecmp(const char *, const char *);
+int strncasecmp(const char *, const char *, size_t);
+
+
+
+
+
+int ffsl(long) ;
+int ffsll(long long) ;
+int fls(int) ;
+int flsl(long) ;
+int flsll(long long) ;
+
+
+# 1 "/usr/include/string.h" 1 3 4
+# 93 "/usr/include/strings.h" 2 3 4
+
+
+
+
+# 1 "/usr/include/secure/_strings.h" 1 3 4
+# 33 "/usr/include/secure/_strings.h" 3 4
+# 1 "/usr/include/secure/_common.h" 1 3 4
+# 34 "/usr/include/secure/_strings.h" 2 3 4
+# 98 "/usr/include/strings.h" 2 3 4
+# 181 "/usr/include/string.h" 2 3 4
+# 190 "/usr/include/string.h" 3 4
+# 1 "/usr/include/secure/_string.h" 1 3 4
+# 191 "/usr/include/string.h" 2 3 4
+# 54 "a.c" 2
+# 1 "/usr/include/stdio.h" 1 3 4
+# 64 "/usr/include/stdio.h" 3 4
+# 1 "/usr/include/_stdio.h" 1 3 4
+# 75 "/usr/include/_stdio.h" 3 4
+# 1 "/usr/include/sys/_types/_va_list.h" 1 3 4
+# 32 "/usr/include/sys/_types/_va_list.h" 3 4
 typedef __darwin_va_list va_list;
 # 76 "/usr/include/_stdio.h" 2 3 4
-# 1 "/usr/include/sys/_types/_size_t.h" 1 3 4
-# 31 "/usr/include/sys/_types/_size_t.h" 3 4
-typedef __darwin_size_t size_t;
-# 77 "/usr/include/_stdio.h" 2 3 4
-# 1 "/usr/include/sys/_types/_null.h" 1 3 4
-# 78 "/usr/include/_stdio.h" 2 3 4
+
+
 
 # 1 "/usr/include/sys/stdio.h" 1 3 4
 # 37 "/usr/include/sys/stdio.h" 3 4
@@ -492,12 +1065,7 @@ int vscanf(const char * restrict __format, va_list) __attribute__((__format__ (_
 int vsnprintf(char * restrict __str, size_t __size, const char * restrict __format, va_list) __attribute__((__format__ (__printf__, 3, 0)));
 int vsscanf(const char * restrict __str, const char * restrict __format, va_list) __attribute__((__format__ (__scanf__, 2, 0)));
 
-# 353 "/usr/include/stdio.h" 3 4
-# 1 "/usr/include/sys/_types/_ssize_t.h" 1 3 4
-# 31 "/usr/include/sys/_types/_ssize_t.h" 3 4
-typedef __darwin_ssize_t ssize_t;
-# 354 "/usr/include/stdio.h" 2 3 4
-
+# 355 "/usr/include/stdio.h" 3 4
 
 int dprintf(int, const char * restrict, ...) __attribute__((__format__ (__printf__, 2, 3))) ;
 int vdprintf(int, const char * restrict, va_list) __attribute__((__format__ (__printf__, 2, 0))) ;
@@ -539,9 +1107,6 @@ FILE *funopen(const void *,
 
 # 411 "/usr/include/stdio.h" 3 4
 # 1 "/usr/include/secure/_stdio.h" 1 3 4
-# 31 "/usr/include/secure/_stdio.h" 3 4
-# 1 "/usr/include/secure/_common.h" 1 3 4
-# 32 "/usr/include/secure/_stdio.h" 2 3 4
 # 42 "/usr/include/secure/_stdio.h" 3 4
 extern int __sprintf_chk (char * restrict, int, size_t,
      const char * restrict, ...);
@@ -567,7 +1132,95 @@ extern int __vsprintf_chk (char * restrict, int, size_t,
 extern int __vsnprintf_chk (char * restrict, size_t, int, size_t,
        const char * restrict, va_list);
 # 412 "/usr/include/stdio.h" 2 3 4
-# 2 "a.c" 2
+# 55 "a.c" 2
+# 1 "/usr/local/Cellar/gcc/7.1.0/lib/gcc/7/gcc/x86_64-apple-darwin16.5.0/7.1.0/include/openacc.h" 1 3 4
+# 35 "/usr/local/Cellar/gcc/7.1.0/lib/gcc/7/gcc/x86_64-apple-darwin16.5.0/7.1.0/include/openacc.h" 3 4
+# 1 "/usr/local/Cellar/gcc/7.1.0/lib/gcc/7/gcc/x86_64-apple-darwin16.5.0/7.1.0/include/stddef.h" 1 3 4
+# 149 "/usr/local/Cellar/gcc/7.1.0/lib/gcc/7/gcc/x86_64-apple-darwin16.5.0/7.1.0/include/stddef.h" 3 4
+typedef long int ptrdiff_t;
+# 328 "/usr/local/Cellar/gcc/7.1.0/lib/gcc/7/gcc/x86_64-apple-darwin16.5.0/7.1.0/include/stddef.h" 3 4
+typedef int wchar_t;
+# 426 "/usr/local/Cellar/gcc/7.1.0/lib/gcc/7/gcc/x86_64-apple-darwin16.5.0/7.1.0/include/stddef.h" 3 4
+typedef struct {
+  long long __max_align_ll __attribute__((__aligned__(__alignof__(long long))));
+  long double __max_align_ld __attribute__((__aligned__(__alignof__(long double))));
+# 437 "/usr/local/Cellar/gcc/7.1.0/lib/gcc/7/gcc/x86_64-apple-darwin16.5.0/7.1.0/include/stddef.h" 3 4
+} max_align_t;
+# 36 "/usr/local/Cellar/gcc/7.1.0/lib/gcc/7/gcc/x86_64-apple-darwin16.5.0/7.1.0/include/openacc.h" 2 3 4
+# 50 "/usr/local/Cellar/gcc/7.1.0/lib/gcc/7/gcc/x86_64-apple-darwin16.5.0/7.1.0/include/openacc.h" 3 4
+typedef enum acc_device_t {
+
+  acc_device_none = 0,
+  acc_device_default = 1,
+  acc_device_host = 2,
+
+  acc_device_not_host = 4,
+  acc_device_nvidia = 5,
+  _ACC_device_hwm,
+
+  _ACC_highest = 0x7fffffff,
+  _ACC_neg = -1
+} acc_device_t;
+
+typedef enum acc_async_t {
+
+  acc_async_noval = -1,
+  acc_async_sync = -2
+} acc_async_t;
+
+int acc_get_num_devices (acc_device_t) __attribute__ ((__nothrow__));
+void acc_set_device_type (acc_device_t) __attribute__ ((__nothrow__));
+acc_device_t acc_get_device_type (void) __attribute__ ((__nothrow__));
+void acc_set_device_num (int, acc_device_t) __attribute__ ((__nothrow__));
+int acc_get_device_num (acc_device_t) __attribute__ ((__nothrow__));
+int acc_async_test (int) __attribute__ ((__nothrow__));
+int acc_async_test_all (void) __attribute__ ((__nothrow__));
+void acc_wait (int) __attribute__ ((__nothrow__));
+void acc_wait_async (int, int) __attribute__ ((__nothrow__));
+void acc_wait_all (void) __attribute__ ((__nothrow__));
+void acc_wait_all_async (int) __attribute__ ((__nothrow__));
+void acc_init (acc_device_t) __attribute__ ((__nothrow__));
+void acc_shutdown (acc_device_t) __attribute__ ((__nothrow__));
+
+
+
+int acc_on_device (acc_device_t __arg) __attribute__ ((__nothrow__));
+
+void *acc_malloc (size_t) __attribute__ ((__nothrow__));
+void acc_free (void *) __attribute__ ((__nothrow__));
+
+
+void *acc_copyin (void *, size_t) __attribute__ ((__nothrow__));
+void *acc_present_or_copyin (void *, size_t) __attribute__ ((__nothrow__));
+void *acc_create (void *, size_t) __attribute__ ((__nothrow__));
+void *acc_present_or_create (void *, size_t) __attribute__ ((__nothrow__));
+void acc_copyout (void *, size_t) __attribute__ ((__nothrow__));
+void acc_delete (void *, size_t) __attribute__ ((__nothrow__));
+void acc_update_device (void *, size_t) __attribute__ ((__nothrow__));
+void acc_update_self (void *, size_t) __attribute__ ((__nothrow__));
+void acc_map_data (void *, void *, size_t) __attribute__ ((__nothrow__));
+void acc_unmap_data (void *) __attribute__ ((__nothrow__));
+void *acc_deviceptr (void *) __attribute__ ((__nothrow__));
+void *acc_hostptr (void *) __attribute__ ((__nothrow__));
+int acc_is_present (void *, size_t) __attribute__ ((__nothrow__));
+void acc_memcpy_to_device (void *, void *, size_t) __attribute__ ((__nothrow__));
+void acc_memcpy_from_device (void *, void *, size_t) __attribute__ ((__nothrow__));
+
+
+
+
+
+
+
+void *acc_get_current_cuda_device (void) __attribute__ ((__nothrow__));
+void *acc_get_current_cuda_context (void) __attribute__ ((__nothrow__));
+void *acc_get_cuda_stream (int) __attribute__ ((__nothrow__));
+int acc_set_cuda_stream (int, void *) __attribute__ ((__nothrow__));
+# 56 "a.c" 2
+# 1 "timer.h" 1
+
+
+
 # 1 "/usr/include/stdlib.h" 1 3 4
 # 65 "/usr/include/stdlib.h" 3 4
 # 1 "/usr/include/sys/wait.h" 1 3 4
@@ -1695,8 +2348,6 @@ typedef __darwin_rune_t rune_t;
 
 
 # 1 "/usr/include/sys/_types/_wchar_t.h" 1 3 4
-# 34 "/usr/include/sys/_types/_wchar_t.h" 3 4
-typedef __darwin_wchar_t wchar_t;
 # 81 "/usr/include/stdlib.h" 2 3 4
 
 typedef struct {
@@ -1929,45 +2580,465 @@ void *valloc(size_t) __attribute__((alloc_size(1)));
 
 
 
-# 3 "a.c" 2
+# 5 "timer.h" 2
 
-# 3 "a.c"
-int yan(int a){
-  int i;
-  for(i=0;i<a;i++)
 
-  if(a==0)return 1;
-  return (yan(a-1)+a+1)%2;
+
+
+
+# 1 "/usr/include/sys/time.h" 1 3 4
+# 75 "/usr/include/sys/time.h" 3 4
+# 1 "/usr/include/sys/_types/_fd_def.h" 1 3 4
+# 48 "/usr/include/sys/_types/_fd_def.h" 3 4
+
+typedef struct fd_set {
+ __int32_t fds_bits[((((1024) % ((sizeof(__int32_t) * 8))) == 0) ? ((1024) / ((sizeof(__int32_t) * 8))) : (((1024) / ((sizeof(__int32_t) * 8))) + 1))];
+} fd_set;
+
+
+
+static __inline int
+__darwin_fd_isset(int _n, const struct fd_set *_p)
+{
+ return (_p->fds_bits[(unsigned long)_n/(sizeof(__int32_t) * 8)] & ((__int32_t)(((unsigned long)1)<<((unsigned long)_n % (sizeof(__int32_t) * 8)))));
 }
-int main(){
-  int i,j,a=0,b[10],c[10]={0},d[10][10]={{0}},k;
-# 23 "a.c"
-  for(i=0;i<10;i++){
-    for(j=0;j<10;j++){
-      b[j]=j;
-      for(k=0;k<10;k++){
- c[j]+=b[k];
-      }
+# 76 "/usr/include/sys/time.h" 2 3 4
+# 1 "/usr/include/sys/_types/_timespec.h" 1 3 4
+# 33 "/usr/include/sys/_types/_timespec.h" 3 4
+struct timespec
+{
+ __darwin_time_t tv_sec;
+ long tv_nsec;
+};
+# 77 "/usr/include/sys/time.h" 2 3 4
+
+
+
+# 1 "/usr/include/sys/_types/_timeval64.h" 1 3 4
+# 34 "/usr/include/sys/_types/_timeval64.h" 3 4
+struct timeval64
+{
+ __int64_t tv_sec;
+ __int64_t tv_usec;
+};
+# 81 "/usr/include/sys/time.h" 2 3 4
+
+
+
+# 1 "/usr/include/sys/_types/_time_t.h" 1 3 4
+# 31 "/usr/include/sys/_types/_time_t.h" 3 4
+typedef __darwin_time_t time_t;
+# 85 "/usr/include/sys/time.h" 2 3 4
+# 1 "/usr/include/sys/_types/_suseconds_t.h" 1 3 4
+# 31 "/usr/include/sys/_types/_suseconds_t.h" 3 4
+typedef __darwin_suseconds_t suseconds_t;
+# 86 "/usr/include/sys/time.h" 2 3 4
+
+
+
+
+
+struct itimerval {
+ struct timeval it_interval;
+ struct timeval it_value;
+};
+# 110 "/usr/include/sys/time.h" 3 4
+# 1 "/usr/include/sys/_types/_fd_setsize.h" 1 3 4
+# 111 "/usr/include/sys/time.h" 2 3 4
+# 1 "/usr/include/sys/_types/_fd_set.h" 1 3 4
+# 112 "/usr/include/sys/time.h" 2 3 4
+# 1 "/usr/include/sys/_types/_fd_clr.h" 1 3 4
+# 113 "/usr/include/sys/time.h" 2 3 4
+# 1 "/usr/include/sys/_types/_fd_isset.h" 1 3 4
+# 114 "/usr/include/sys/time.h" 2 3 4
+# 1 "/usr/include/sys/_types/_fd_zero.h" 1 3 4
+# 115 "/usr/include/sys/time.h" 2 3 4
+
+
+
+# 1 "/usr/include/sys/_types/_fd_copy.h" 1 3 4
+# 119 "/usr/include/sys/time.h" 2 3 4
+# 129 "/usr/include/sys/time.h" 3 4
+struct timezone {
+ int tz_minuteswest;
+ int tz_dsttime;
+};
+# 172 "/usr/include/sys/time.h" 3 4
+struct clockinfo {
+ int hz;
+ int tick;
+ int tickadj;
+ int stathz;
+ int profhz;
+};
+
+
+
+
+
+# 1 "/usr/include/time.h" 1 3 4
+# 68 "/usr/include/time.h" 3 4
+# 1 "/usr/include/sys/_types/_clock_t.h" 1 3 4
+# 31 "/usr/include/sys/_types/_clock_t.h" 3 4
+typedef __darwin_clock_t clock_t;
+# 69 "/usr/include/time.h" 2 3 4
+
+
+
+
+
+struct tm {
+ int tm_sec;
+ int tm_min;
+ int tm_hour;
+ int tm_mday;
+ int tm_mon;
+ int tm_year;
+ int tm_wday;
+ int tm_yday;
+ int tm_isdst;
+ long tm_gmtoff;
+ char *tm_zone;
+};
+# 97 "/usr/include/time.h" 3 4
+extern char *tzname[];
+
+
+extern int getdate_err;
+
+extern long timezone __asm("_" "timezone" );
+
+extern int daylight;
+
+
+char *asctime(const struct tm *);
+clock_t clock(void) __asm("_" "clock" );
+char *ctime(const time_t *);
+double difftime(time_t, time_t);
+struct tm *getdate(const char *);
+struct tm *gmtime(const time_t *);
+struct tm *localtime(const time_t *);
+time_t mktime(struct tm *) __asm("_" "mktime" );
+size_t strftime(char * restrict, size_t, const char * restrict, const struct tm * restrict) __asm("_" "strftime" );
+char *strptime(const char * restrict, const char * restrict, struct tm * restrict) __asm("_" "strptime" );
+time_t time(time_t *);
+
+
+void tzset(void);
+
+
+
+char *asctime_r(const struct tm * restrict, char * restrict);
+char *ctime_r(const time_t *, char *);
+struct tm *gmtime_r(const time_t * restrict, struct tm * restrict);
+struct tm *localtime_r(const time_t * restrict, struct tm * restrict);
+
+
+time_t posix2time(time_t);
+
+
+
+void tzsetwall(void);
+time_t time2posix(time_t);
+time_t timelocal(struct tm * const);
+time_t timegm(struct tm * const);
+
+
+
+int nanosleep(const struct timespec *__rqtp, struct timespec *__rmtp) __asm("_" "nanosleep" );
+# 152 "/usr/include/time.h" 3 4
+typedef enum {
+_CLOCK_REALTIME = 0,
+
+_CLOCK_MONOTONIC = 6,
+
+
+_CLOCK_MONOTONIC_RAW = 4,
+
+_CLOCK_MONOTONIC_RAW_APPROX = 5,
+
+_CLOCK_UPTIME_RAW = 8,
+
+_CLOCK_UPTIME_RAW_APPROX = 9,
+
+
+_CLOCK_PROCESS_CPUTIME_ID = 12,
+
+_CLOCK_THREAD_CPUTIME_ID = 16
+
+} clockid_t;
+
+
+int clock_getres(clockid_t __clock_id, struct timespec *__res);
+
+
+int clock_gettime(clockid_t __clock_id, struct timespec *__tp);
+
+
+
+__uint64_t clock_gettime_nsec_np(clockid_t __clock_id);
+
+
+
+
+int clock_settime(clockid_t __clock_id, const struct timespec *__tp);
+
+
+
+
+
+
+# 185 "/usr/include/sys/time.h" 2 3 4
+
+
+
+
+
+int adjtime(const struct timeval *, struct timeval *);
+int futimes(int, const struct timeval *);
+int lutimes(const char *, const struct timeval *) ;
+int settimeofday(const struct timeval *, const struct timezone *);
+
+
+int getitimer(int, struct itimerval *);
+int gettimeofday(struct timeval * restrict, void * restrict);
+
+# 1 "/usr/include/sys/_select.h" 1 3 4
+# 39 "/usr/include/sys/_select.h" 3 4
+int select(int, fd_set * restrict, fd_set * restrict,
+  fd_set * restrict, struct timeval * restrict)
+
+
+
+
+  __asm("_" "select" "$1050")
+
+
+
+
+  ;
+# 200 "/usr/include/sys/time.h" 2 3 4
+
+int setitimer(int, const struct itimerval * restrict,
+  struct itimerval * restrict);
+int utimes(const char *, const struct timeval *);
+
+
+# 11 "timer.h" 2
+
+
+
+
+
+
+
+
+# 18 "timer.h"
+struct timeval timerStart;
+
+
+void StartTimer()
+{
+# 33 "timer.h"
+    gettimeofday(&timerStart, 
+# 33 "timer.h" 3 4
+                             ((void *)0)
+# 33 "timer.h"
+                                 );
+
+}
+
+
+double GetTimer()
+{
+
+
+
+
+
+    struct timeval timerStop, timerElapsed;
+    gettimeofday(&timerStop, 
+# 46 "timer.h" 3 4
+                            ((void *)0)
+# 46 "timer.h"
+                                );
+    
+# 47 "timer.h" 3 4
+   do { (
+# 47 "timer.h"
+   &timerElapsed
+# 47 "timer.h" 3 4
+   )->tv_sec = (
+# 47 "timer.h"
+   &timerStop
+# 47 "timer.h" 3 4
+   )->tv_sec - (
+# 47 "timer.h"
+   &timerStart
+# 47 "timer.h" 3 4
+   )->tv_sec; (
+# 47 "timer.h"
+   &timerElapsed
+# 47 "timer.h" 3 4
+   )->tv_usec = (
+# 47 "timer.h"
+   &timerStop
+# 47 "timer.h" 3 4
+   )->tv_usec - (
+# 47 "timer.h"
+   &timerStart
+# 47 "timer.h" 3 4
+   )->tv_usec; if ((
+# 47 "timer.h"
+   &timerElapsed
+# 47 "timer.h" 3 4
+   )->tv_usec < 0) { (
+# 47 "timer.h"
+   &timerElapsed
+# 47 "timer.h" 3 4
+   )->tv_sec--; (
+# 47 "timer.h"
+   &timerElapsed
+# 47 "timer.h" 3 4
+   )->tv_usec += 1000000; } } while (0)
+# 47 "timer.h"
+                                                   ;
+    return timerElapsed.tv_sec*1000.0+timerElapsed.tv_usec/1000.0;
+
+}
+# 57 "a.c" 2
+
+
+
+
+
+
+double A[4096][4096];
+double Anew[4096][4096];
+
+int main(int argc, char** argv)
+{
+  printf("aa");
+
+  int b;
+
+  double **AA;
+  double AAnew[3][3];
+  int a;
+  const int n = 4096;
+  const int m = 4096;
+# 90 "a.c"
+  const int iter_max = 1000;
+
+
+
+  
+# 94 "a.c" 3 4
+ __builtin___memset_chk (
+# 94 "a.c"
+ A
+# 94 "a.c" 3 4
+ , 
+# 94 "a.c"
+ 0, n * m * sizeof(double)
+# 94 "a.c" 3 4
+ , __builtin_object_size (
+# 94 "a.c"
+ A
+# 94 "a.c" 3 4
+ , 0))
+# 94 "a.c"
+                                     ;
+
+  
+# 96 "a.c" 3 4
+ __builtin___memset_chk (
+# 96 "a.c"
+ Anew
+# 96 "a.c" 3 4
+ , 
+# 96 "a.c"
+ 0, n * m * sizeof(double)
+# 96 "a.c" 3 4
+ , __builtin_object_size (
+# 96 "a.c"
+ Anew
+# 96 "a.c" 3 4
+ , 0))
+# 96 "a.c"
+                                        ;
+
+  const double tol = 1.0e-6;
+  double error = 1.0;
+
+
+  for (int j = 0; j < n; j++)
+    {
+      A[j][0] = 1.0;
+      Anew[j][0] = 1.0;
     }
-
-    c[i]=c[i+1];
-
-    for(j=0;j<10;j++){
-      for(k=1;k<9;k++){
+  AAnew[0][0]=1;
 
 
- c[k]=c[k];
+  printf("Jacobi relaxation Calculation: %d x %d mesh\n", n, m);
+
+  StartTimer();
+  int iter = 0;
+  int l;
+  for(l=0;l<1;l++){
+    while ( error > tol && iter < iter_max )
+      {
+
+ error = 0.0;
+
+ for( int j = 1; j < n-1; j++)
+   {
+     for( int i = 1; i < m-1; i++ )
+       {
+  Anew[j][i] = 0.25 * ( A[j][i+1] + A[j][i-1]
+          + A[j-1][i] + A[j+1][i]);
+  error = fmax( error, fabs(Anew[j][i] - A[j][i]));
+       }
+   }
+ AAnew[0][0]=1;
+
+ for( int j = 1; j < n-1; j++)
+   {
+     for( int i = 1; i < m-1; i++ )
+       {
+  A[j][i] = Anew[j][i];
+       }
+
+     AAnew[0][0]=1;
+
+   }
 
 
-
+ AAnew[0][0]=1;
+ if(iter % 100 == 0) printf("%5d, %0.6f\n", iter, error);
+ iter++;
       }
-    }
-    printf("a");
+        A[0][0]=A[0][0];
+
   }
+#pragma acc update host(A,Anew)
 
+  int cou=0;
+  for(int i=0;i<n;i++){
+    for(int j=0;j<m;j++){
+      if(A[i][j]>0.1){
+ printf("%f ",A[i][j]);
+ cou++;
+      }
+      if(A[i][j]>0.1){
+ printf("%f ",Anew[i][j]);
+ cou++;
+      }
+    }
+  }
+  double runtime = GetTimer();
 
-  printf("\n");
-  for(i=0;i<10;i++)
-    printf("%d\n",b[i]);
-  return 0;
+  printf(" total: %f s %d\n", runtime / 1000,cou);
+
+  exit(0);
 }
